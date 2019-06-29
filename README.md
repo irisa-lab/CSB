@@ -51,3 +51,8 @@ $ exeCUI
 ```bash
 $ exeGUI
 ```
+
+- PDBMLViewer
+```bash
+$ exeBioPolymerViewer 1rvb.xml
+```
