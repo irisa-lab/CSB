@@ -1,0 +1,9 @@
+#! /bin/sh
+
+cuiPath=${ST_HOME}/jar/scala-tinker.jar
+jlinePath=${ST_HOME}/lib/misc/jline.jar
+
+mainClass="irisalab.tinker.cui.RISMCUI"
+
+
+scala -classpath $cuiPath:$jlinePath  $mainClass

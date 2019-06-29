@@ -1,0 +1,8 @@
+#! /bin/sh
+
+jarPath=${ST_HOME}/jar/scala-tinker.jar
+
+mainClass="irisalab.tinker.converter.guv.PlaceventManager"
+
+echo $@
+scala -classpath $jarPath  $mainClass $@

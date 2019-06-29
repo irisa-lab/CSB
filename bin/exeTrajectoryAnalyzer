@@ -1,0 +1,16 @@
+#! /bin/sh
+
+jarPath=${ST_HOME}/jar/scala-tinker.jar
+
+mainClass="irisalab.amber.analysis.TrajectoryAnalyzer"
+
+#heapSize=1024
+heapSize=2048
+
+#permSize=64
+permSize=128
+
+memoryOptions="-J-XX:NewRatio=1 -J-Xmx${heapSize}M -J-Xms${heapSize}M -J-XX:MaxPermSize=${permSize}M -J-XX:PermSize=${permSize}M "
+
+#echo $@
+scala $memoryOptions  -classpath  $jarPath  $mainClass $@

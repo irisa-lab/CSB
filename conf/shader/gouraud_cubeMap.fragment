@@ -1,0 +1,41 @@
+//
+// gouraud.frag - Gouraud Shading 用フラグメントシェーダ
+//
+#version 400
+
+
+
+in vec2 texCrd;     // texture 2D coordinate inputed from vertex shader
+
+in vec3 Color; //Color inputed from vertex shader
+
+
+//uniform samplercube Texture;
+
+uniform sampler2D texture;
+
+uniform int textureFlag;
+
+
+out vec4 fColor;
+
+void main(void)
+{
+
+  if(  textureFlag == 0 )
+  {
+    fColor = vec4(Color, 1.0);
+  }
+  else
+  {
+    vec2 a = texCrd * vec2(3.14159265, 1.57079633);
+
+    vec2 c = cos(a);
+    vec2 s = sin(a);
+
+//  fColor = texture2DProj( texture, vec3(vec2(s.x,c.x) * c.y,  s.y ) );
+    fColor = texture2D( texture, texCrd );
+  }
+
+  //function main
+}
