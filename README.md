@@ -34,6 +34,11 @@ export ST_HOME=/home/user/CSB.scala
 # csh, tcsh
 set ST_HOME=/home/user/CSB.scala
 ```
+- Windows
+```bat
+rem Assuming c:\home\user\CSB.scala is a root directory
+set ST_HOME=c:\home\user\CSB.scala
+```
 
 ###  How to use modules we already have
 
