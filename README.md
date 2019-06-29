@@ -28,7 +28,7 @@ CSB, an application framework for **C**omputational **S**cience on **B**iopolyme
 
 - Linux/Unix
 ```bash
-# Assuming /home/user/CSB.scala is root directory of the project
+# Assuming /home/user/CSB.scala is a root directory
 # bash
 export ST_HOME=/home/user/CSB.scala
 # csh, tcsh
