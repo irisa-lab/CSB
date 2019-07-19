@@ -3,14 +3,14 @@
 
 stPath=${ST_HOME}/jar/scala-tinker.jar
 
-lwjglLibPath=${ST_HOME}/lwjgl/native/macosx
+lwjglLibPath=${ST_HOME}/lib/lwjgl/native/macosx
 
-lwjglPath=${ST_HOME}/lwjgl/jar/lwjgl.jar:${ST_HOME}lwjgl/jar/lwjgl_util.jar
+lwjglPath=${ST_HOME}/lib/lwjgl/jar/lwjgl.jar:${ST_HOME}/lib/lwjgl/jar/lwjgl_util.jar
 
 
 option="-J-XstartOnFirstThread"
-libPath=${ST_HOME}/swt/macosx/64bit/
-swtPath=${ST_HOME}/swt/macosx/64bit/swt.jar
+libPath=${ST_HOME}/lib/swt/macosx/64bit/
+swtPath=${ST_HOME}/lib/swt/macosx/64bit/swt.jar
 
 
 mainClass="irisalab.tinker.gui.RISMSWTGUI"
@@ -18,6 +18,3 @@ mainClass="irisalab.tinker.gui.RISMSWTGUI"
 #echo $swtPath
 
 scala  $option -classpath ${stPath}:${swtPath}:$lwjglPath  -Djava.library.path=${libPath}:$lwjglLibPath ${mainClass}
-
-
-
