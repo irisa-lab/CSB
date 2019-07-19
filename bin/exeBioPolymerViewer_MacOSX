@@ -1,0 +1,18 @@
+#! /bin/sh
+
+
+stPath=${ST_HOME}/jar/scala-tinker.jar
+
+
+lwjglLibPath=${ST_HOME}/lib/lwjgl/native/linux
+lwjglPath=${ST_HOME}/lib/lwjgl/jar/lwjgl.jar:${ST_HOME}/lib/lwjgl/jar/lwjgl_util.jar
+
+jvmOption=-J-XX:CompileThreshold=1000
+
+libPath=${ST_HOME}/lib/swt/macosx/64bit/
+swtPath=${ST_HOME}/lib/swt/macosx/64bit/swt.jar
+
+
+mainClass="irisalab.tinker.visual.BioPolymerViewer"
+
+scala $jvmOption -classpath ${stPath}:${swtPath}:$lwjglPath  -Djava.library.path=${libPath}:$lwjglLibPath ${mainClass} $1
