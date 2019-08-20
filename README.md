@@ -24,6 +24,4 @@ CSB, an application framework for **C**omputational **S**cience on **B**iopolyme
 ## How to use
 ---
 
-### For user
-
-[User's guide](https://github.com/irisa-lab/CSB/wiki/User's-guide)
+ For user's/developer's guides, please read [wiki](https://github.com/irisa-lab/CSB/wiki).
