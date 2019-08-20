@@ -1,4 +1,8 @@
 
+# User guide
+
+## Setup
+
 ### Set Environment variable, ST_HOME
 
 - Linux/Unix
@@ -18,6 +22,9 @@ export ST_HOME=/home/user/CSB.scala
 ```bat
 rem Assuming c:\home\user\CSB.scala is a root directory
 set ST_HOME=c:\home\user\CSB.scala
+rem -------------------------------------------
+rem If path contains white-spaces,  enclose a path by double-quotes
+set ST_HOME="C:\Program Files\CSB.scala"
 ```
 
 ###  How to use modules we already have
