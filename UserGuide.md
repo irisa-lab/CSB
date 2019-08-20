@@ -32,6 +32,27 @@ rem enclose a path by double-quotes
 set ST_HOME="C:\Program Files\CSB.scala"
 ```
 
+### Add to PATH
+
+
+- Linux/Unix
+```bash
+# bash
+export PATH=$PATH:$ST_HOME/bin
+# csh, tcsh
+set PATH=$PATH:$ST_HOME/bin
+```
+- Mac OS X
+```bash
+export PATH=$PATH:$ST_HOME/bin
+```
+- Windows
+```bat
+set PATH=%PATH%:%ST_HOME%\bin
+```
+
+
+
 ###  How to use modules we already have
 
 - CUI
