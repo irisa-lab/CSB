@@ -5,7 +5,7 @@
 
 ### Install Java
 
-Please install Java 8 or later.
+Please install Java 8 or later. Scala is not necessary to use CSB.
 
 ### Set Environment variable, ST_HOME
 
@@ -78,6 +78,7 @@ user@domain dir> validatePDB pdb1rvb.pdb
 ```
 
 - GUI
+  - startup GUI
 ```bash
 # Linux/Unix/Mac OS X
 $ exeGUI
