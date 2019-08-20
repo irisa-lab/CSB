@@ -3,6 +3,10 @@
 
 ## Setup
 
+### Install Java
+
+Please install Java 8 or later.
+
 ### Set Environment variable, ST_HOME
 
 - Linux/Unix
@@ -23,7 +27,8 @@ export ST_HOME=/home/user/CSB.scala
 rem Assuming c:\home\user\CSB.scala is a root directory
 set ST_HOME=c:\home\user\CSB.scala
 rem -------------------------------------------
-rem If path contains white-spaces,  enclose a path by double-quotes
+rem If path to a root directory contains white-spaces,
+rem enclose a path by double-quotes
 set ST_HOME="C:\Program Files\CSB.scala"
 ```
 
