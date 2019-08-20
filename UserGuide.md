@@ -11,25 +11,25 @@ Please install Java 8 or later. Scala is not necessary to use CSB.
 
 - Linux/Unix
 ```bash
-# Assuming /home/user/CSB.scala is a root directory
+# Assuming /home/user/CSB is a root directory
 # bash
-export ST_HOME=/home/user/CSB.scala
+export ST_HOME=/home/user/CSB
 # csh, tcsh
-set ST_HOME=/home/user/CSB.scala
+set ST_HOME=/home/user/CSB
 ```
 - Mac OS X
 ```bash
-# Assuming /home/user/CSB.scala is a root directory
-export ST_HOME=/home/user/CSB.scala
+# Assuming /home/user/CSB is a root directory
+export ST_HOME=/home/user/CSB
 ```
 - Windows
 ```bat
-rem Assuming c:\home\user\CSB.scala is a root directory
-set ST_HOME=c:\home\user\CSB.scala
+rem Assuming c:\home\user\CSB is a root directory
+set ST_HOME=c:\home\user\CSB
 rem -------------------------------------------
 rem If path to a root directory contains white-spaces,
 rem enclose a path by double-quotes
-set ST_HOME="C:\Program Files\CSB.scala"
+set ST_HOME="C:\Program Files\CSB"
 ```
 
 ### Add to PATH
