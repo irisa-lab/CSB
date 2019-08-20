@@ -58,10 +58,8 @@ set PATH=%PATH%:%ST_HOME%\bin
 - CUI
   - startup CUI
 ```bash
-# Linux/Unix
+# Linux/Unix/Mac OS X
 $ exeCUI
-# Mac OS X
-$ exeCUI_MacOSX
 # Windows
 $ exeCUI.bat
 ```
@@ -81,20 +79,16 @@ user@domain dir> validatePDB pdb1rvb.pdb
 
 - GUI
 ```bash
-# Linux/Unix
+# Linux/Unix/Mac OS X
 $ exeGUI
-# Mac OS X
-$ exeGUI_MacOSX
 # Windows
 $ exeGUI.bat
 ```
 
 - PDBMLViewer
 ```bash
-# Linux/Unix
+# Linux/Unix/Mac OS X
 $ exeBioPolymerViewer  1rvb.xml
-# Mac OS X
-$ exeBioPolymerViewer_MacOSX  1rvb.xml
 # Windows
 $ exeBioPolymerViewer.bat  1rvb.xml
 ```
