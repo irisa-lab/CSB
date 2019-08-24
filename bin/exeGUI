@@ -1,38 +1,46 @@
 #! /bin/sh
 
 
-stPath=${ST_HOME}/jar/scala-tinker.jar
 
-lwjglLibPath=${ST_HOME}/lib/lwjgl/native/linux
-
-lwjglPath=${ST_HOME}/lib/lwjgl/jar/lwjgl.jar:${ST_HOME}/lib/lwjgl/jar/lwjgl_util.jar
-
+#-----------
+# Arch
+#-----------
 type=`arch`
 
-
-echo "Architectur:"$type
-
 if [ $type = "i386" ];then
-
-	libPath=${ST_HOME}/lib/swt/linux/32bit/
-	swtPath=${ST_HOME}/lib/swt/linux/32bit/swt.jar
-
+    bit=32
 elif [ $type = "i686" ];then
-
-	libPath=${ST_HOME}/lib/swt/linux/32bit/
-	swtPath=${ST_HOME}/lib/swt/linux/32bit/swt.jar
-
+    bit=32
 else
-	libPath=${ST_HOME}/lib/swt/linux/64bit/
-	swtPath=${ST_HOME}/lib/swt/linux/64bit/swt.jar
+    bit=64
 fi
+
+
+
+#-----------
+# OS
+#-----------
+os=`uname -s`
+
+if [ "$os" == "Darwin" ];then  # Mac OS X
+    option="-XstartOnFirstThread"
+    stPath=${ST_HOME}/jar/scala-tinker-assembly-macosx.jar
+    libPath=${ST_HOME}/lib/lwjgl/native/macosx
+elif [ "$os" == "Linux" ];then  # Linux 
+    stPath=${ST_HOME}/jar/scala-tinker-assembly-linux${bit}.jar    
+    libPath=${ST_HOME}/lib/lwjgl/native/linux
+elif [ "$(expr substr $os 1 6)" == "CYGWIN" ];then  #Cygwin
+    stPath=`cygpath -pw ${ST_HOME}/jar/scala-tinker-assembly-windows${bit}.jar`
+else
+    stPath=${ST_HOME}/jar/scala-tinker-assembly-linux${bit}.jar
+fi
+
 
 
 mainClass="irisalab.tinker.gui.RISMSWTGUI"
 
-#echo $swtPath
 
-scala  -classpath ${stPath}:${swtPath}:$lwjglPath  -Djava.library.path=${libPath}:$lwjglLibPath ${mainClass}
+java $option  -Djava.library.path=${libPath} -cp $stPath ${mainClass}
 
 
 

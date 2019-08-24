@@ -1,15 +1,18 @@
 
-set stPath=%ST_HOME%\jar\scala-tinker.jar
+IF "%PROCESSOR_ARCHITECTURE%" == "AMD64" (
+
+ set bit=64
+
+) ELSE (
+ set bit=32
+
+)
 
 
-
-set jlinePath=%ST_HOME%\jar\jline.jar
-
-
-
+set jarPath=%ST_HOME%\jar\scala-tinker-assembly-windows%bit%.jar
 
 set mainClass=irisalab.tinker.cui.RISMCUI
 
-scala -classpath %stPath%;%jlinePath% %mainClass%
+java  -Djava.library.path=%jarPath% -cp %jarPath%  %mainClass%
 
 
