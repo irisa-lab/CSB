@@ -5,9 +5,13 @@ CSB, an application framework for **C**omputational **S**cience on **B**iopolyme
 
 
 ## prerequisites
+- To test samples
+  - Java 8 or later
+- To use the framework
+  - Java 8 or later
+  - Scala 2.12.x
 
-- Scala 2.12.x
-- Java 8
+
 
 ## Libraries CSB uses
 
