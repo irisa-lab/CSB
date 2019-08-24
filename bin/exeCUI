@@ -1,9 +1,37 @@
-#! /bin/sh
+#!/bin/sh
 
-cuiPath=${ST_HOME}/jar/scala-tinker.jar
-jlinePath=${ST_HOME}/lib/misc/jline.jar
+
+
+#-----------
+# Arch
+#-----------
+type=`arch`
+
+if [ $type = "i386" ];then
+    bit=32
+elif [ $type = "i686" ];then
+    bit=32
+else
+    bit=64
+fi
+
+#-----------
+# OS
+#-----------
+os=`uname -s`
+
+if [ "$os" == "Darwin" ];then  # Mac OS X
+    jarPath=${ST_HOME}/jar/csb-assembly-macosx.jar
+elif [ "$os" == "Linux" ];then  # Linux
+    jarPath=${ST_HOME}/jar/csb-assembly-linux${bit}.jar
+elif [ "$(expr substr $os 1 6)" == "CYGWIN" ];then  #Cygwin
+    jarPath=`cygpath -pw ${ST_HOME}/jar/csb-assembly-windows${bit}.jar`
+else
+    jarPath=${ST_HOME}/jar/csb-assembly-linux${bit}.jar
+fi
+
 
 mainClass="irisalab.tinker.cui.RISMCUI"
 
 
-scala -classpath $cuiPath:$jlinePath  $mainClass
+java -classpath $jarPath  $mainClass
