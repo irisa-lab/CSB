@@ -21,13 +21,13 @@ fi
 os=`uname -s`
 
 if [ "$os" == "Darwin" ];then  # Mac OS X
-    jarPath=${ST_HOME}/jar/scala-tinker-assembly-macosx.jar
-elif [ "$os" == "Linux" ];then  # Linux 
-    jarPath=${ST_HOME}/jar/scala-tinker-assembly-linux${bit}.jar    
+    jarPath=${ST_HOME}/jar/csb-assembly-macosx.jar
+elif [ "$os" == "Linux" ];then  # Linux
+    jarPath=${ST_HOME}/jar/csb-assembly-linux${bit}.jar
 elif [ "$(expr substr $os 1 6)" == "CYGWIN" ];then  #Cygwin
-    jarPath=`cygpath -pw ${ST_HOME}/jar/scala-tinker-assembly-windows${bit}.jar`
+    jarPath=`cygpath -pw ${ST_HOME}/jar/csb-assembly-windows${bit}.jar`
 else
-    jarPath=${ST_HOME}/jar/scala-tinker-assembly-linux${bit}.jar
+    jarPath=${ST_HOME}/jar/csb-assembly-linux${bit}.jar
 fi
 
 

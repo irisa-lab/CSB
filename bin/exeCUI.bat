@@ -9,10 +9,8 @@ IF "%PROCESSOR_ARCHITECTURE%" == "AMD64" (
 )
 
 
-set jarPath=%ST_HOME%\jar\scala-tinker-assembly-windows%bit%.jar
+set jarPath=%ST_HOME%\jar\csb-assembly-windows%bit%.jar
 
 set mainClass=irisalab.tinker.cui.RISMCUI
 
 java  -Djava.library.path=%jarPath% -cp %jarPath%  %mainClass%
-
-

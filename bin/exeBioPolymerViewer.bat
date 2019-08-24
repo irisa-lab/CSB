@@ -9,7 +9,7 @@ IF "%PROCESSOR_ARCHITECTURE%" == "AMD64" (
 )
 
 
-set stPath=%ST_HOME%\jar\scala-tinker-assembly-windows%bit%.jar
+set stPath=%ST_HOME%\jar\csb-assembly-windows%bit%.jar
 set libPath=%ST_HOME%\lib\lwjgl\native\windows
 
 set mainClass=irisalab.tinker.visual.BioPolymerViewer

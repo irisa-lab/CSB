@@ -24,15 +24,15 @@ os=`uname -s`
 
 if [ "$os" == "Darwin" ];then  # Mac OS X
     option="-XstartOnFirstThread"
-    stPath=${ST_HOME}/jar/scala-tinker-assembly-macosx.jar
+    stPath=${ST_HOME}/jar/csb-assembly-macosx.jar
     libPath=${ST_HOME}/lib/lwjgl/native/macosx
-elif [ "$os" == "Linux" ];then  # Linux 
-    stPath=${ST_HOME}/jar/scala-tinker-assembly-linux${bit}.jar    
+elif [ "$os" == "Linux" ];then  # Linux
+    stPath=${ST_HOME}/jar/csb-assembly-linux${bit}.jar
     libPath=${ST_HOME}/lib/lwjgl/native/linux
 elif [ "$(expr substr $os 1 6)" == "CYGWIN" ];then  #Cygwin
-    stPath=`cygpath -pw ${ST_HOME}/jar/scala-tinker-assembly-windows${bit}.jar`
+    stPath=`cygpath -pw ${ST_HOME}/jar/csb-assembly-windows${bit}.jar`
 else
-    stPath=${ST_HOME}/jar/scala-tinker-assembly-linux${bit}.jar
+    stPath=${ST_HOME}/jar/csb-assembly-linux${bit}.jar
 fi
 
 
@@ -41,6 +41,3 @@ mainClass="irisalab.tinker.gui.RISMSWTGUI"
 
 
 java $option  -Djava.library.path=${libPath} -cp $stPath ${mainClass}
-
-
-
