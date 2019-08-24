@@ -13,4 +13,4 @@ set jarPath=%ST_HOME%\jar\csb-assembly-windows%bit%.jar
 
 set mainClass=irisalab.amber.analysis.TrajectoryAnalyzer
 
-java  -Djava.library.path=%jarPath% -cp %jarPath%  %mainClass%
+java  -Djava.library.path=%jarPath% -cp %jarPath%  %mainClass%  %1
