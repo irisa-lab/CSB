@@ -1,7 +1,7 @@
 # CSB
 ----------------------------------  
 
-CSB, an application framework for **C**omputational **S**cience on **B**iopolymer in Scala, is an application framework made with scalable language Scala for computational science on biopolymers.
+CSB, a tool for **C**omputational **S**cience on **B**iopolymer in Scala, is an application framework made with scalable language Scala for computational science on biopolymers.
 
 
 ## prerequisites
