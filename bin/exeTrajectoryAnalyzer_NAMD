@@ -1,6 +1,14 @@
 #! /bin/sh
+# Jar Prefix
+if [ -z $ST_JAR_PREFIX ];then
+  ST_JAR_PREFIX=csb
+fi
+# Jar Prefix
+if [ -z $ST_JAR_PREFIX ];then
+  ST_JAR_PREFIX=csb
+fi
 
-jarPath=${ST_HOME}/jar/scala-tinker.jar:${ST_HOME}/jar/fortranFormat.jar
+jarPath=${ST_HOME}/jar/${ST_JAR_PREFIX}.jar:${ST_HOME}/jar/fortranFormat.jar
 
 mainClass="irisalab.namd.analysis.TrajectoryAnalyzer"
 

@@ -1,6 +1,17 @@
 #!/bin/sh
+# Jar Prefix
+if [ -z $ST_JAR_PREFIX ];then
+  ST_JAR_PREFIX=csb
+fi
+# Jar Prefix
+if [ -z $ST_JAR_PREFIX ];then
+  ST_JAR_PREFIX=csb
+fi
 
-
+# Jar prefix
+if [ -z $ST_JAR_PREFIX ];then
+    ST_JAR_PREFIX=csb
+fi
 
 #-----------
 # Arch
@@ -21,13 +32,13 @@ fi
 os=`uname -s`
 
 if [ "$os" == "Darwin" ];then  # Mac OS X
-    jarPath=${ST_HOME}/jar/csb-assembly-macosx.jar
-elif [ "$os" == "Linux" ];then  # Linux
-    jarPath=${ST_HOME}/jar/csb-assembly-linux${bit}.jar
+    jarPath=${ST_HOME}/jar/${ST_JAR_PREFIX}-assembly-macosx.jar
+elif [ "$os" == "Linux" ];then  # Linux 
+    jarPath=${ST_HOME}/jar/${ST_JAR_PREFIX}-assembly-linux${bit}.jar    
 elif [ "$(expr substr $os 1 6)" == "CYGWIN" ];then  #Cygwin
-    jarPath=`cygpath -pw ${ST_HOME}/jar/csb-assembly-windows${bit}.jar`
+    jarPath=`cygpath -pw ${ST_HOME}/jar/${ST_JAR_PREFIX}-assembly-windows${bit}.jar`
 else
-    jarPath=${ST_HOME}/jar/csb-assembly-linux${bit}.jar
+    jarPath=${ST_HOME}/jar/${ST_JAR_PREFIX}-assembly-linux${bit}.jar
 fi
 
 

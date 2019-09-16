@@ -1,36 +1,16 @@
-#!/bin/sh
-
-
-
-#-----------
-# Arch
-#-----------
-type=`arch`
-
-if [ $type = "i386" ];then
-    bit=32
-elif [ $type = "i686" ];then
-    bit=32
-else
-    bit=64
+#! /bin/sh
+# Jar Prefix
+if [ -z $ST_JAR_PREFIX ];then
+  ST_JAR_PREFIX=csb
+fi
+# Jar Prefix
+if [ -z $ST_JAR_PREFIX ];then
+  ST_JAR_PREFIX=csb
 fi
 
-#-----------
-# OS
-#-----------
-os=`uname -s`
+jarPath=${ST_HOME}/jar/${ST_JAR_PREFIX}.jar
 
-if [ "$os" == "Darwin" ];then  # Mac OS X
-    jarPath=${ST_HOME}/jar/csb-assembly-macosx.jar
-elif [ "$os" == "Linux" ];then  # Linux
-    jarPath=${ST_HOME}/jar/csb-assembly-linux${bit}.jar
-elif [ "$(expr substr $os 1 6)" == "CYGWIN" ];then  #Cygwin
-    jarPath=`cygpath -pw ${ST_HOME}/jar/csb-assembly-windows${bit}.jar`
-else
-    jarPath=${ST_HOME}/jar/csb-assembly-linux${bit}.jar
-fi
-
-
+mainClass="irisalab.amber.analysis.TrajectoryAnalyzer"
 
 #heapSize=1024
 heapSize=2048
@@ -38,10 +18,7 @@ heapSize=2048
 #permSize=64
 permSize=128
 
-memoryOptions="-XX:NewRatio=1 -Xmx${heapSize}M -Xms${heapSize}M -XX:MaxPermSize=${permSize}M -XX:PermSize=${permSize}M "
+memoryOptions="-J-XX:NewRatio=1 -J-Xmx${heapSize}M -J-Xms${heapSize}M -J-XX:MaxPermSize=${permSize}M -J-XX:PermSize=${permSize}M "
 
-
-mainClass="irisalab.amber.analysis.TrajectoryAnalyzer"
-
-
-java $memoryOptions -classpath $jarPath  $mainClass   $@
+#echo $@
+scala $memoryOptions  -classpath  $jarPath  $mainClass $@

@@ -1,3 +1,6 @@
+IF NOT DEFINED ST_JAR_PREFIX (
+  set ST_JAR_PREFIX=csb
+)
 
 IF "%PROCESSOR_ARCHITECTURE%" == "AMD64" (
 
@@ -9,7 +12,7 @@ IF "%PROCESSOR_ARCHITECTURE%" == "AMD64" (
 )
 
 
-set jarPath=%ST_HOME%\jar\csb-assembly-windows%bit%.jar
+set jarPath=%ST_HOME%\jar\%ST_JAR_PREFIX%-assembly-windows%bit%.jar
 
 set mainClass=irisalab.tinker.cui.RISMCUI
 
