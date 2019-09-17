@@ -1,11 +1,7 @@
 #! /bin/sh
 # Jar Prefix
 if [ -z $ST_JAR_PREFIX ];then
-  ST_JAR_PREFIX=csb
-fi
-# Jar Prefix
-if [ -z $ST_JAR_PREFIX ];then
-  ST_JAR_PREFIX=csb
+  ST_JAR_PREFIX=stcsb
 fi
 
 

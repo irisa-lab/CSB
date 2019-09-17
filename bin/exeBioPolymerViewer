@@ -1,11 +1,11 @@
 #! /bin/sh
 # Jar Prefix
 if [ -z $ST_JAR_PREFIX ];then
-  ST_JAR_PREFIX=csb
+  ST_JAR_PREFIX=stcsb
 fi
 # Jar Prefix
 if [ -z $ST_JAR_PREFIX ];then
-  ST_JAR_PREFIX=csb
+  ST_JAR_PREFIX=stcsb
 fi
 
 
@@ -31,8 +31,8 @@ if [ "$os" == "Darwin" ];then  # Mac OS X
     option="-XstartOnFirstThread"
     stPath=${ST_HOME}/jar/${ST_JAR_PREFIX}-assembly-macosx.jar
     libPath=${ST_HOME}/lib/lwjgl/native/macosx
-elif [ "$os" == "Linux" ];then  # Linux 
-    stPath=${ST_HOME}/jar/${ST_JAR_PREFIX}-assembly-linux${bit}.jar    
+elif [ "$os" == "Linux" ];then  # Linux
+    stPath=${ST_HOME}/jar/${ST_JAR_PREFIX}-assembly-linux${bit}.jar
     libPath=${ST_HOME}/lib/lwjgl/native/linux
 elif [ "$(expr substr $os 1 6)" == "CYGWIN" ];then  #Cygwin
     stPath=`cygpath -pw ${ST_HOME}/jar/${ST_JAR_PREFIX}-assembly-windows${bit}.jar`
@@ -49,6 +49,3 @@ mainClass="irisalab.tinker.visual.BioPolymerViewer"
 #echo $swtPath
 
 java $option $jvmOption -classpath $stPath  -Djava.library.path=${libPath} ${mainClass} $1
-
-
-
