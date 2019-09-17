@@ -1,7 +1,7 @@
 # STCSB
 ----------------------------------  
 
-STCSB, a **S**cala **T**ool for **C**omputational **S**cience on **B**iopolymer in Scala, is a tool made with scalable language Scala for computational molecular science science on biopolymers.
+A **S**cala **T**ool for **C**omputational **S**cience on **B**iomolecules (STCSB) developed in Scala.
 
 
 ## prerequisites
