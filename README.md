@@ -1,7 +1,7 @@
 # STCSB
 ----------------------------------  
 
-A **S**cala **T**ool for **C**omputational **S**cience on **B**iomolecules (STCSB) developed in Scala.
+A **S**cala **T**ool for **C**omputational **S**cience of **B**iomolecules (STCSB) developed in Scala.
 
 
 ## prerequisites
