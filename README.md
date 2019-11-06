@@ -3,6 +3,9 @@
 
 A **S**cala **T**ool for **C**omputational **S**cience of **B**iomolecules (STCSB) developed in Scala.
 
+Version:1.0  
+Copyright (c) 2019 Itaru Onishi, Hiroto Tsuji, and Masayuki Irisa. All rights reserved.
+
 
 ## prerequisites
 - To test samples
@@ -28,3 +31,9 @@ A **S**cala **T**ool for **C**omputational **S**cience of **B**iomolecules (STCS
 ---
 
  For user's/developer's guides, please read [wiki](https://github.com/irisa-lab/CSB/wiki).
+
+
+## Please cite
+**A tool written in Scala for preparation and analysis in MD simulation and 3D-RISM calculation of biomolecules (in press)**   
+*Itaru Onishi, Hiroto Tsuji, and Masayuki Irisa*  
+Biophysics and Physicobiology, 2019, vol. 16
