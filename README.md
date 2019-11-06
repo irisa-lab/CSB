@@ -35,6 +35,6 @@ Copyright (c) 2019 Itaru Onishi, Hiroto Tsuji and Masayuki Irisa. All rights res
 
 ## Please cite
 **A tool written in Scala for preparation and analysis in MD simulation and 3D-RISM calculation of biomolecules (in press)**   
-*Itaru Onishi, Hiroto Tsuji and Masayuki Irisa*  
+*Itaru Onishi, Hiroto Tsuji, and Masayuki Irisa*  
 Biophysics and Physicobiology, 2019, vol. 16,   
 doi: 10.2142/biophysico.16.0_00
