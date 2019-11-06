@@ -3,7 +3,7 @@
 
 A **S**cala **T**ool for **C**omputational **S**cience of **B**iomolecules (STCSB) developed in Scala.
 
-Version:1.0  
+Version:1.0.0  
 Copyright (c) 2019 Itaru Onishi, Hiroto Tsuji, and Masayuki Irisa. All rights reserved.
 
 
